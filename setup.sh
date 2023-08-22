@@ -33,3 +33,5 @@ apt-get install -y kali-desktop-xfce xorg xrdp
 sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 
 systemctl enable xrdp --now
+
+shutdown -r now
