@@ -34,4 +34,8 @@ sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 
 systemctl enable xrdp --now
 
+apt install docker.io
+
+apt install seclists
+
 shutdown -r now
