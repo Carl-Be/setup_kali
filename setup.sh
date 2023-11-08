@@ -38,4 +38,29 @@ apt install docker.io
 
 apt install seclists
 
+# start crackmapexec install
+cd ~ 
+rm $(which crackmapexec)
+
+rm $(which cme)
+
+apt-get install -y libssl-dev libffi-dev python-dev build-essential
+
+git clone --recursive https://github.com/byt3bl33d3r/CrackMapExec
+
+cd CrackMapExec
+
+poetry install
+
+touch /etc/profile.d/00-aliases.sh
+
+echo 'alias crackmapexec="poetry run -C ~/CrackMapExec crackmapexec"' >> /etc/zsh/zshrc
+
+echo 'alias cme="poetry run -C ~/CrackMapExec crackmapexec"' >> /etc/zsh/zshrc
+
+echo 'alias crackmapexec="poetry run -C ~/CrackMapExec crackmapexec"' >> /etc/bash.bashrc
+
+echo 'alias cme="poetry run -C ~/CrackMapExec crackmapexec"' >> /etc/bash.bashrc
+# end crackmapexec install
+
 shutdown -r now
