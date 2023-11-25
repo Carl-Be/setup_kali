@@ -68,4 +68,4 @@ apt install zaproxy
 
 usermod -a -G ssl-cert xrdp
 
-shutdown -r
+shutdown -r now
